@@ -112,7 +112,7 @@ posts.forEach(post => {
         //eventlistener del bottone dei like
         likeButton.addEventListener('click', function () {
             // Cambio colore del testo del bottone
-            likeButton.classList.add('like-button--liked');
+            likeButton.classList.toggle('like-button--liked');
     
             // Incremento il counter dei likes
             post.likes++;
@@ -121,8 +121,8 @@ posts.forEach(post => {
             // Salvataggio dell'ID del post nei likedPosts
             likedPosts.push(post.id);
     
+            console.log(likedPosts)
         });
-        console.log(likedPosts)
     });
     
 
